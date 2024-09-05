@@ -1,0 +1,23 @@
+/** @format */
+
+.header-header {
+    background-color: #f6f7f9;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
+    .header-container {
+        height: 59px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-logo {
+            display: flex;
+
+            .header-icon {
+                height: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}

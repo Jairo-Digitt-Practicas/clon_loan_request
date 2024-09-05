@@ -1,18 +1,24 @@
 /** @format */
 
 import PropTypes from "prop-types";
+import useStore from "../store";
 
-const StepValidate = ({ userData, wizard }) => {
+const StepValidate = ({ wizard }) => {
+    const { name, lastName, secondLastName, curp, phone, email } = useStore();
+
+    if (!wizard) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
-            <h2>Confirmación</h2>
+            <h2>{name} estas a un paso de recuperar tu libertad financiera</h2>
             <p>
-                Nombre: {userData.firstName} {userData.lastName1}{" "}
-                {userData.lastName2}
+                Nombre: {name} {lastName} {secondLastName}
             </p>
-            <p>CURP: {userData.curp}</p>
-            <p>Número de Teléfono: {userData.phone}</p>
-            <p>Email: {userData.email}</p>
+            <p>CURP: {curp}</p>
+            <p>Número de Teléfono: {phone}</p>
+            <p>Email: {email}</p>
             {wizard && <button onClick={wizard.previousStep}>Previous</button>}
             <button onClick={() => alert("Datos confirmados")}>
                 Confirmar
@@ -22,7 +28,7 @@ const StepValidate = ({ userData, wizard }) => {
 };
 
 StepValidate.propTypes = {
-    userData: PropTypes.object.isRequired,
+    //userData: PropTypes.object.isRequired,
     wizard: PropTypes.object,
 };
 

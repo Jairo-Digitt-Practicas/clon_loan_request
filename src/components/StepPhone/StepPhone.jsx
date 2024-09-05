@@ -3,11 +3,11 @@
 import PropTypes from "prop-types";
 import useStore from "../store";
 import { saveUserData } from "../api/index";
-import { useState } from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const StepPhone = ({ handleDataChange, wizard }) => {
-    const [phone, setPhone] = useState("");
-    const { name } = useStore();
+    const { name, phone, setPhone } = useStore();
 
     const handleSubmit = () => {
         handleDataChange({ phone });
@@ -22,16 +22,18 @@ const StepPhone = ({ handleDataChange, wizard }) => {
 
     return (
         <div>
-            <h2>Número de Teléfono {name}</h2>
-            <input
-                type='text'
-                name='phone'
-                placeholder='phone'
+            <h2>Ingresa tu número de teléfono {name}</h2>
+            <TextField
+                id='filled-basic'
+                label='Phone'
+                variant='filled'
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
             />
             <button onClick={wizard.previousStep}>Previous</button>
-            <button onClick={handleSubmit}>Next</button>
+            <Button variant='contained' onClick={handleSubmit}>
+                Contained
+            </Button>
         </div>
     );
 };
