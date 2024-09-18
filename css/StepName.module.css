@@ -1,0 +1,18 @@
+/** @format */
+:global(.MuiAvatar-root) {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  font-family: ftaktual, Arial, Helvetica, sans-serif !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  width: 52px !important;
+  height: 52px !important;
+}/*# sourceMappingURL=StepName.module.css.map */

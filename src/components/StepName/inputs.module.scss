@@ -1,0 +1,19 @@
+/** @format */
+@use "../../styles/scss/variables";
+
+$formulario-display: variables.$display-flexible;
+$formulario-direction: map-get(variables.$flex-direction, column);
+
+.formulario {
+    display: #{$formulario-display};
+    flex-direction: #{$formulario-direction};
+
+    .input-fullname {
+        margin-top: 18.5px;
+        border-radius: 12px;
+    }
+
+    .formulario-botton {
+        margin-top: 18.5px;
+    }
+}

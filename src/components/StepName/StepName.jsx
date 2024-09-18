@@ -5,9 +5,8 @@ import { saveUserData } from "../api/index";
 import useStore from "../store";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Avatar from "@mui/material/Avatar";
-
-import "../../../css/styles.css";
+import UserAvatar from "../Avatar/Avatar";
+import styles from "./inputs.module.scss";
 
 const StepName = ({ handleDataChange, wizard }) => {
     const {
@@ -40,10 +39,7 @@ const StepName = ({ handleDataChange, wizard }) => {
                 <div className='chat_avatar'>
                     <div>
                         <div>
-                            <Avatar
-                                alt='Remy Sharp'
-                                src='/static/images/avatar/1.jpg'
-                            />
+                            <UserAvatar />
                         </div>
                         <span className='chat_status__mJcIB'></span>
                     </div>
@@ -55,14 +51,21 @@ const StepName = ({ handleDataChange, wizard }) => {
                 </div>
             </div>
 
-            <div className='formulario'>
+            <div className={styles.formulario}>
                 <TextField
+                    MuiInputBase-root
+                    MuiFilledInput-root
+                    MuiInputBase-colorPrimary
+                    MuiInputBase-fullWidth
+                    MuiInputBase-formControl
+                    MuiInputBase-sizeSmall
+                    mui-style-1nx0r9n
                     id='filled-basic'
                     label='Primer y segundo nombre'
                     variant='filled'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className='input-fullname'
+                    className={styles["input-fullname"]}
                 />
                 <TextField
                     id='filled-basic'
@@ -70,7 +73,7 @@ const StepName = ({ handleDataChange, wizard }) => {
                     variant='filled'
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    className='input-fullname'
+                    className={styles["input-fullname"]}
                 />
                 <TextField
                     id='filled-basic'
@@ -78,10 +81,10 @@ const StepName = ({ handleDataChange, wizard }) => {
                     variant='filled'
                     value={secondLastName}
                     onChange={(e) => setSecondLastName(e.target.value)}
-                    className='input-fullname'
+                    className={styles["input-fullname"]}
                 />
                 <Button
-                    className='formulario-botton'
+                    className={styles["formulario-botton"]}
                     variant='contained'
                     onClick={handleSubmit}>
                     Contained

@@ -36,37 +36,6 @@
   height: 12px;
 }
 
-.css-17o22dy-MuiAvatar-root {
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  font-family: ftaktual, Arial, Helvetica, sans-serif !important;
-  font-size: 1.25rem !important;
-  line-height: 1 !important;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
-  width: 52px !important;
-  height: 52px !important;
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-}
-.formulario .input-fullname {
-  margin-top: 18.5px;
-  border-radius: 100px !important;
-  max-width: 200px;
-}
-.formulario .formulario-botton {
-  margin-top: 18.5px;
-}
-
 /** @format */
 .header-header {
   background-color: #f6f7f9;
@@ -87,4 +56,52 @@
 .header-header .header-container .logo-logo .header-icon {
   height: 40px;
   cursor: pointer;
+}
+
+/** @format */
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 576px;
+  }
+}
+@media (min-width: 1200px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 992px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 992px;
+  }
+}
+@media (min-width: 768px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 768px;
+  }
+}
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 576px;
+  }
+}
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/** @format */
+/** @format */
+:global(.formulario) {
+  display: flex;
+  flex-direction: column;
+}
+:global(.formulario) .input-fullname {
+  margin-top: 18.5px;
+  border-radius: 100px !important;
+  max-width: 200px;
+}
+:global(.formulario) .formulario-botton {
+  margin-top: 18.5px;
 }/*# sourceMappingURL=styles.css.map */

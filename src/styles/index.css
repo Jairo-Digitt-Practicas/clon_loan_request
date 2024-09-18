@@ -13,6 +13,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
 a {
@@ -32,6 +33,12 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     background-color: #f6f7f9;
+    height: 100%;
+    box-sizing: inherit;
+
+    div {
+        min-height: 100%;
+    }
 }
 
 h1 {

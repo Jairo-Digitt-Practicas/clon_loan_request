@@ -1,0 +1,12 @@
+/** @format */
+
+@use "sass:map";
+@use "./variables";
+
+@mixin media($size) {
+    $width: map.get(variables.$breakpoints, $size);
+
+    @media (min-width: #{$width}px) {
+        @content;
+    }
+}

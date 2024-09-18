@@ -9,6 +9,7 @@ import StepEmail from "../components/StepEmail/StepEmail.jsx";
 import StepValidate from "../components/StepValidate/StepValidate.jsx";
 import { updateStepName, saveUserData } from "../components/Step/Step.jsx";
 import Container from "@mui/material/Container";
+import "../../css/styles.css";
 import Header from "../components/Header/Header.jsx";
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
 
     return (
         <>
-            <Header />
+            <Header wizard={wizard} /> {/* Pasar el wizard aquí */}
             <Container fixed>
                 <StepWizard
                     instance={setWizard}
