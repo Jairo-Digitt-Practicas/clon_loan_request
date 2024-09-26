@@ -2,19 +2,19 @@
 
 import PropTypes from "prop-types";
 import useStore from "../store";
-import { saveUserData } from "../api/index";
+import { getUserData } from "../api/index";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import UserAvatar from "../Avatar/Avatar";
 import styles from "../StepName/inputs.module.scss";
 
 const StepPhone = ({ handleDataChange, wizard }) => {
-    const { name, phone, setPhone } = useStore();
+    const { name, phone, setPhone, id } = useStore();
 
     const handleSubmit = () => {
         handleDataChange({ phone });
         wizard.nextStep();
-        saveUserData({ phone });
+        getUserData(phone, id);
         console.log(phone);
     };
 

@@ -24,10 +24,20 @@ const StepName = ({ handleDataChange, wizard }) => {
         }
     }, [wizard]);
 
-    const handleSubmit = () => {
-        handleDataChange({ name, lastName, secondLastName });
+    const handleSubmit = async () => {
+        let [responseData] = await saveUserData({
+            name,
+            lastName,
+            secondLastName,
+        });
+        console.log("verificando id del back", responseData);
+        handleDataChange({
+            name,
+            lastName,
+            secondLastName,
+            id: responseData.id,
+        });
         wizard.nextStep();
-        saveUserData({ name, lastName, secondLastName });
     };
     if (!wizard) {
         return <div>Loading...</div>;

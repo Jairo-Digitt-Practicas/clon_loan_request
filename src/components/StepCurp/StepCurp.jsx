@@ -2,20 +2,21 @@
 
 import PropTypes from "prop-types";
 import useStore from "../store";
-import { saveUserData } from "../api/index";
+import { getUserData } from "../api/index";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import UserAvatar from "../Avatar/Avatar";
 import styles from "../StepName/inputs.module.scss";
 
 const StepCurp = ({ handleDataChange, wizard }) => {
-    const { name, curp, setCurp } = useStore();
+    const { name, curp, setCurp, id } = useStore();
 
     const handleSubmit = () => {
-        handleDataChange({ curp });
-        wizard.nextStep();
-        saveUserData({ curp });
+        console.log(curp, id);
+        getUserData(curp, id);
+        handleDataChange({ curp, id });
         console.log(curp);
+        wizard.nextStep();
     };
 
     if (!wizard) {

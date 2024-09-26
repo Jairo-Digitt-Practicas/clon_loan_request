@@ -91,17 +91,4 @@
   }
 }
 
-/** @format */
-/** @format */
-:global(.formulario) {
-  display: flex;
-  flex-direction: column;
-}
-:global(.formulario) .input-fullname {
-  margin-top: 18.5px;
-  border-radius: 100px !important;
-  max-width: 200px;
-}
-:global(.formulario) .formulario-botton {
-  margin-top: 18.5px;
-}/*# sourceMappingURL=styles.css.map */
+/** @format *//*# sourceMappingURL=styles.css.map */

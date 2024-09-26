@@ -6,8 +6,7 @@
 }
 .formulario .input-fullname {
   margin-top: 18.5px;
-  border-radius: 100px !important;
-  max-width: 200px;
+  border-radius: 12px;
 }
 .formulario .formulario-botton {
   margin-top: 18.5px;

@@ -11,16 +11,10 @@ import { updateStepName, saveUserData } from "../components/Step/Step.jsx";
 import Container from "@mui/material/Container";
 import "../../css/styles.css";
 import Header from "../components/Header/Header.jsx";
+import useStore from "../components/store/index.js";
 
 const App = () => {
-    const [userData, setUserData] = useState({
-        firstName: "",
-        lastName1: "",
-        lastName2: "",
-        curp: "",
-        phone: "",
-        email: "",
-    });
+    const { saveAllUserData } = useStore();
     const [wizard, setWizard] = useState(null);
 
     const handleStepChange = (stepName) => {
@@ -28,8 +22,8 @@ const App = () => {
     };
 
     const handleDataChange = (data) => {
-        setUserData((prevData) => ({ ...prevData, ...data }));
         saveUserData(data);
+        saveAllUserData(data);
     };
 
     return (
@@ -44,21 +38,18 @@ const App = () => {
                         wizard={wizard}
                     />
                     <StepCurp
-                        userData={userData}
                         handleDataChange={handleDataChange}
                         wizard={wizard}
                     />
                     <StepPhone
-                        userData={userData}
                         handleDataChange={handleDataChange}
                         wizard={wizard}
                     />
                     <StepEmail
-                        userData={userData}
                         handleDataChange={handleDataChange}
                         wizard={wizard}
                     />
-                    <StepValidate userData={userData} wizard={wizard} />
+                    <StepValidate wizard={wizard} />
                 </StepWizard>
             </Container>
         </>

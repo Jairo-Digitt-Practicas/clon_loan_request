@@ -1,0 +1,13 @@
+/** @format */
+@use "../../styles/scss/variables";
+
+.whatsapp {
+    color: #28d146;
+    display: inline-block;
+    font-weight: inherit;
+    .icon {
+        display: inherit;
+        margin-right: 8px;
+        margin-left: -4px;
+    }
+}

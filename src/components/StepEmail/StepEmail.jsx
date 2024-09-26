@@ -2,19 +2,19 @@
 
 import PropTypes from "prop-types";
 import useStore from "../store";
-import { saveUserData } from "../api/index";
+import { getUserData } from "../api/index";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import UserAvatar from "../Avatar/Avatar";
 import styles from "../StepName/inputs.module.scss";
 
 const StepEmail = ({ handleDataChange, wizard }) => {
-    const { name, email, setEmail } = useStore();
+    const { name, email, setEmail, id } = useStore();
 
     const handleSubmit = () => {
         handleDataChange({ email });
         wizard.nextStep();
-        saveUserData({ email });
+        getUserData(email, id);
         console.log(email);
     };
 
