@@ -1,0 +1,13 @@
+/** @format */
+/** @format */
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario .input-fullname {
+  margin-top: 18.5px;
+  border-radius: 12px;
+}
+.formulario .formulario-botton {
+  margin-top: 18.5px;
+}/*# sourceMappingURL=inputs.module.css.map */

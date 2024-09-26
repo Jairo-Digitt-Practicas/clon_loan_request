@@ -1,0 +1,19 @@
+/** @format */
+
+:global(.MuiAvatar-root.MuiAvatar-circular) {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: ftaktual, Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    width: 52px;
+    height: 52px;
+}

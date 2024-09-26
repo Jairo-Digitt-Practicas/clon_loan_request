@@ -1,0 +1,94 @@
+/** @format */
+/** @format */
+/** @format */
+.chat_complete {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+.chat_complete .chat_avatar {
+  text-align: center;
+}
+.chat_complete .chat_avatar div {
+  position: relative;
+}
+.chat_complete .chat_avatar .chat_name__STuji {
+  font-family: ppmori, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  opacity: 0.4;
+}
+.chat_complete .chat_title {
+  font-family: ppmori, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 18.4px;
+}
+
+.chat_status__mJcIB {
+  background: #00d5a2;
+  border: 2px solid #f6f7f9;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+}
+
+/** @format */
+.header-header {
+  background-color: #f6f7f9;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-header .header-container {
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-header .header-container .logo-logo {
+  display: flex;
+}
+.header-header .header-container .logo-logo .header-icon {
+  height: 40px;
+  cursor: pointer;
+}
+
+/** @format */
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 576px;
+  }
+}
+@media (min-width: 1200px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 992px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 992px;
+  }
+}
+@media (min-width: 768px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 768px;
+  }
+}
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 576px;
+  }
+}
+@media (min-width: 576px) {
+  .MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/** @format *//*# sourceMappingURL=styles.css.map */

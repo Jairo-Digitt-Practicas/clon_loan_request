@@ -1,0 +1,47 @@
+/** @format */
+.chat_complete {
+    display: $display-flexible;
+    align-items: flex-start;
+    margin-bottom: map-get($tamanio-letra, tamanio-26px);
+    .chat_avatar {
+        text-align: center;
+        div {
+            position: relative;
+        }
+        .chat_name__STuji {
+            font-family: ppmori, Arial, Helvetica, sans-serif;
+            font-size: map-get($tamanio-letra, tamanio-12px);
+            opacity: 0.4;
+        }
+    }
+    .chat_title {
+        font-family: ppmori, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 18.4px;
+    }
+}
+.chat_status__mJcIB {
+    background: #00d5a2;
+    border: 2px solid #f6f7f9;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+}
+
+// .formulario {
+//     display: $display-flexible;
+//     flex-direction: map-get($flex-direction, column);
+//     .input-fullname {
+//         margin-top: 18.5px;
+//         border-radius: 100px !important;
+//         max-width: 200px;
+//     }
+//     .formulario-botton {
+//         margin-top: 18.5px;
+//     }
+// }

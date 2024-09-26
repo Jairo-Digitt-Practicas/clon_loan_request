@@ -1,15 +1,22 @@
 /** @format */
-
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { saveUserData } from "../api/index";
 import useStore from "../store";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import UserAvatar from "../Avatar/Avatar";
+import styles from "./inputs.module.scss";
 
 const StepName = ({ handleDataChange, wizard }) => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName1, setLastName1] = useState("");
-    const [lastName2, setLastName2] = useState("");
-    const { setName } = useStore();
+    const {
+        name,
+        setName,
+        lastName,
+        setLastName,
+        secondLastName,
+        setSecondLastName,
+    } = useStore();
 
     useEffect(() => {
         if (wizard) {
@@ -17,42 +24,83 @@ const StepName = ({ handleDataChange, wizard }) => {
         }
     }, [wizard]);
 
-    const handleSubmit = () => {
-        handleDataChange({ firstName, lastName1, lastName2 });
+    const handleSubmit = async () => {
+        let [responseData] = await saveUserData({
+            name,
+            lastName,
+            secondLastName,
+        });
+        console.log("verificando id del back", responseData);
+        handleDataChange({
+            name,
+            lastName,
+            secondLastName,
+            id: responseData.id,
+        });
         wizard.nextStep();
-        saveUserData({ firstName, lastName1, lastName2 });
-        setName(firstName);
     };
     if (!wizard) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div>
-            <h2>Full Name </h2>
-            <input
-                type='text'
-                name='nombre'
-                placeholder='Nombre'
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-                type='text'
-                name='primer apellido'
-                placeholder='Primer Apellido'
-                value={lastName1}
-                onChange={(e) => setLastName1(e.target.value)}
-            />
-            <input
-                type='text'
-                name='segundo apellido'
-                placeholder='Segundo Apellido'
-                value={lastName2}
-                onChange={(e) => setLastName2(e.target.value)}
-            />
-            <button onClick={handleSubmit}>Continuar</button>
-        </div>
+        <>
+            <div className='chat_complete'>
+                <div className='chat_avatar'>
+                    <div>
+                        <div>
+                            <UserAvatar />
+                        </div>
+                        <span className='chat_status__mJcIB'></span>
+                    </div>
+                    <strong className='chat_name__STuji'>Diana</strong>
+                </div>
+                <div className='chat_title'>
+                    ¡Vamos a liberarte de deudas! Comencemos con tu nombre como
+                    aparece en tu INE!
+                </div>
+            </div>
+
+            <div className={styles.formulario}>
+                <TextField
+                    MuiInputBase-root
+                    MuiFilledInput-root
+                    MuiInputBase-colorPrimary
+                    MuiInputBase-fullWidth
+                    MuiInputBase-formControl
+                    MuiInputBase-sizeSmall
+                    mui-style-1nx0r9n
+                    id='filled-basic'
+                    label='Primer y segundo nombre'
+                    variant='filled'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className={styles["input-fullname"]}
+                />
+                <TextField
+                    id='filled-basic'
+                    label='Apellido paterno'
+                    variant='filled'
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className={styles["input-fullname"]}
+                />
+                <TextField
+                    id='filled-basic'
+                    label='Apellido materno'
+                    variant='filled'
+                    value={secondLastName}
+                    onChange={(e) => setSecondLastName(e.target.value)}
+                    className={styles["input-fullname"]}
+                />
+                <Button
+                    className={styles["formulario-botton"]}
+                    variant='contained'
+                    onClick={handleSubmit}>
+                    Contained
+                </Button>
+            </div>
+        </>
     );
 };
 

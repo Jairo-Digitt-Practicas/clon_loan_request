@@ -1,0 +1,68 @@
+/** @format */
+
+$type-text: (ppmori, Arial, Helvetica, sans-serif);
+
+$letra: (
+    font500: 500,
+);
+
+$colores: (
+    background: #f6f7f9,
+    primario: #505557,
+    secundario: #0b63e5,
+    terciario: #f0f0f0,
+    cuarto: #00d5a2,
+    quinto: #ec0505,
+    blanco: #f6f7f9,
+);
+
+$tamanio-letra: (
+    tamanio-1px: 1px,
+    tamanio-2px: 2px,
+    tamanio-11px: 11px,
+    tamanio-12px: 12px,
+    tamanio-14px: 14px,
+    titulo: 18px,
+    tamanio-26px: 26px,
+    tamanio-52px: 52px,
+    tamanio-50: 50%,
+    solid: solid,
+);
+
+$padding: (
+    separadores: 18.4px,
+);
+
+$position: (
+    relative: relative,
+    absolute: absolute,
+);
+
+$display-flexible: flex;
+$display-inline: inline-block;
+
+$overflow: (
+    hidden: hidden,
+);
+
+$opacity: (
+    opacity-3: 0.3,
+);
+
+$direction: (
+    center: center,
+    bottom: bottom,
+    top: top,
+);
+
+$flex-direction: (
+    column: column,
+);
+
+$breakpoints: (
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+);
